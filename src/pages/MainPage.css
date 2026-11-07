@@ -1,0 +1,384 @@
+.main-page{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.hero {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 22px;
+
+    background-size: 100% 100%, cover;
+    background-position: center, center 1%;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 24px 40px;
+}
+.welcome-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 44px 48px;
+}
+
+.weather-widget {
+    display: flex;
+    align-items:center;
+    min-width: 220px;
+    padding: 16px;
+    border-radius: 16px;
+    background: transparent;
+    color: #fff;
+    gap: 2px;
+}
+
+.welcome{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.weather-city {
+    display: flex;
+    align-items:center;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.weather-city img {
+    width: 64px;
+    height: 64px;
+}
+
+
+
+@media (max-width: 768px) {
+    .welcome-card-header {
+        flex-direction: column;
+    }
+
+    .weather-widget {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.card-main{
+    width: 650px;
+    position: relative;
+    bottom:100px;
+    margin-left: 40px;
+}
+.card-main-title{
+    font-size: 58px;
+    font-weight: 500;
+}
+.card-main-description{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 160%;
+}
+.card-main-buttons{
+    display: flex;
+    gap:18px;
+    margin-bottom: 50px;
+}
+.card-main-buttons button{
+    display: flex;
+    background-color: #2279BA;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    gap:8px;
+    cursor: pointer;
+}
+.card-main-buttons p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+/* Поисковик на главной странице */
+.home-search-section {
+    margin: 36px 160px 60px;
+    color: #163b35;
+}
+
+
+.home-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 27.5px 18px ;
+    background: #fff;
+    border: 1px solid #e0e9ee;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(25, 63, 70, 0.07);
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-main-icon {
+    flex-shrink: 0;
+    margin: 0 12px;
+    color: #299ca6;
+    font-size: 21px;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 4px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #163b35;
+    font: inherit;
+    font-size: 16px;
+}
+
+.search-input-wrapper input::placeholder {
+    color: #9aa9a5;
+}
+
+.clear-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: #82918d;
+    cursor: pointer;
+}
+
+.search-region-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    border-left: 1px solid #e6ecea;
+}
+
+.region-icon {
+    flex-shrink: 0;
+    color: #299ca6;
+    font-size: 19px;
+}
+
+.search-region-wrapper select {
+    max-width: 170px;
+    padding: 14px 4px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #34534c;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.voice-search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid #dce9e7;
+    border-radius: 12px;
+    background: #f7fbfa;
+    color: #299ca6;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.voice-search-button:hover,
+.voice-search-button.listening {
+    background: #e5f5f3;
+    border-color: #299ca6;
+}
+
+.search-submit-button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    background: #2279ba;
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-submit-button:hover {
+    background: #17669f;
+}
+
+/* Подсказки */
+.search-suggestions {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border: 1px solid #e0e9ee;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(25, 63, 70, 0.12);
+}
+
+.search-suggestions button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 16px;
+    border: none;
+    background: #fff;
+    color: #34534c;
+    text-align: left;
+    cursor: pointer;
+}
+
+.search-suggestions button:hover {
+    background: #f2f9f8;
+}
+
+.search-suggestions button svg {
+    color: #299ca6;
+    flex-shrink: 0;
+}
+
+.search-suggestions button span {
+    flex: 1;
+}
+
+.search-suggestions button small {
+    color: #8a9a95;
+}
+
+.search-suggestions > p {
+    margin: 0;
+    padding: 16px;
+    color: #71817d;
+}
+
+/* Результаты */
+.search-results {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e0e9ee;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.search-results h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf1f0;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item strong {
+    font-size: 15px;
+}
+
+.search-result-item p {
+    margin: 5px 0 0;
+    color: #71817d;
+    font-size: 13px;
+}
+
+.search-result-item > svg {
+    color: #299ca6;
+    font-size: 20px;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+    .home-search-section {
+        margin: 28px 20px 40px;
+    }
+
+    .home-search-heading h2 {
+        font-size: 23px;
+    }
+
+    .home-search {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search-input-wrapper {
+        flex-basis: 100%;
+    }
+
+    .search-region-wrapper {
+        flex: 1;
+        border-left: none;
+        padding-left: 8px;
+    }
+
+    .search-region-wrapper select {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .search-submit-button {
+        flex: 1;
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-search-section {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .search-region-wrapper {
+        flex-basis: 100%;
+    }
+
+    .voice-search-button {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+
